@@ -300,5 +300,3 @@ screenshots/
     ├── 7.png
 ├── Swagger
     ├── swagger-1.png
-├── Demo-video
-    ├── api-notes-demo.mp4
