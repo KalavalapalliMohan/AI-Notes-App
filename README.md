@@ -258,3 +258,47 @@ Mohan
 Full Stack Developer
 
 PHP | Laravel | React | MySQL
+
+
+
+Setup Instructions
+
+Backend
+
+git clone https://github.com/KalavalapalliMohan/AI-Notes-App.git
+
+cd AI-Notes-App
+
+composer install
+
+cp .env.example .env
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan serve
+
+
+Frontend
+
+cd ai-notes-frontend
+
+npm install
+
+npm run dev
+
+
+screenshots/
+├── Postman
+    ├── 1.png
+    ├── 2.png
+    ├── 3.png
+    ├── 4.png
+    ├── 5.png
+    ├── 6.png
+    ├── 7.png
+├── Swagger
+    ├── swagger-1.png
+├── Demo-video
+    ├── api-notes-demo.mp4
