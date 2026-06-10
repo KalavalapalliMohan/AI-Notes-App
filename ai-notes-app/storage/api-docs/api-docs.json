@@ -1,0 +1,87 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "AI Notes API",
+        "description": "Laravel AI Notes Application API Documentation",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/notes": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Get all notes",
+                "operationId": "bae18c4794ae9fa2869bd2d6172e8bc1",
+                "responses": {
+                    "200": {
+                        "description": "Notes fetched successfully"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Create Note",
+                "operationId": "b741a3f13d8dcdf760b41fbad8c68737",
+                "responses": {
+                    "201": {
+                        "description": "Note created successfully"
+                    }
+                }
+            }
+        },
+        "/api/notes/{id}": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Get Single Note",
+                "operationId": "00f78d61d63bb5da699bf8d59cffb990",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Note details"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Update Note",
+                "operationId": "ad1a404f450c11ee4f3ae2c7cf82ee66",
+                "responses": {
+                    "200": {
+                        "description": "Note updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Delete Note",
+                "operationId": "99dcc7e5a20cc64c35b75534a478c803",
+                "responses": {
+                    "200": {
+                        "description": "Note deleted"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Notes",
+            "description": "Notes"
+        }
+    ]
+}
