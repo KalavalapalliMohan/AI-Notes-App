@@ -1,20 +1,36 @@
 # AI Notes App
 
-AI Notes App is a full-stack note management application built with Laravel 12 and React. It allows users to create, update, delete, search, and manage notes through a RESTful API and modern frontend interface.
+## Project Overview
+
+AI Notes App is a full-stack note management application built using Laravel 12 and React. The application allows users to create, update, delete, search, and manage notes through RESTful APIs. It also includes AI-powered note summarization and API documentation using Swagger/OpenAPI.
+
+---
 
 ## Features
 
-* Create Notes
-* View Notes
-* Update Notes
-* Delete Notes
+### Backend Features
+
+* RESTful CRUD APIs
+* Route Model Binding
+* Request Validation
+* Pagination
+* Search Functionality
+* AI Summary Generation
+* Swagger/OpenAPI Documentation
+* MySQL Database Integration
+
+### Frontend Features
+
+* Notes Listing
+* Create Note
+* Edit Note
+* View Note
+* Delete Note
 * Search Notes
 * Pagination
-* Route Model Binding
-* Form Validation
-* Swagger API Documentation
-* AI Summary Feature
-* React Frontend
+* AI Summary Display
+
+---
 
 ## Tech Stack
 
@@ -23,8 +39,7 @@ AI Notes App is a full-stack note management application built with Laravel 12 a
 * PHP 8.2
 * Laravel 12
 * MySQL
-* REST API
-* Swagger (L5-Swagger)
+* L5 Swagger
 
 ### Frontend
 
@@ -33,50 +48,89 @@ AI Notes App is a full-stack note management application built with Laravel 12 a
 * Axios
 * React Router DOM
 
+### AI Tools
+
+* ChatGPT
+* GitHub Copilot
+* Cursor AI
+
+---
+
 ## Project Structure
 
+Backend
+
+```text
 ai-notes-app/
+├── app/
+├── config/
+├── database/
+├── routes/
+├── tests/
+├── public/
+├── composer.json
+├── README.md
+```
 
-* app/
-* routes/
-* database/
-* tests/
-* config/
-* resources/
-* public/
+Frontend
 
+```text
 ai-notes-frontend/
+├── src/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+```
 
-* src/pages
-* src/services
-* src/App.jsx
-* src/main.jsx
+---
+
+## Database Schema
+
+### Notes Table
+
+| Column     | Type            |
+| ---------- | --------------- |
+| id         | bigint          |
+| title      | string          |
+| content    | text            |
+| summary    | text (nullable) |
+| created_at | timestamp       |
+| updated_at | timestamp       |
+
+---
 
 ## API Endpoints
 
 ### Notes
 
-GET /api/notes
-
-GET /api/notes/{id}
-
-POST /api/notes
-
-PUT /api/notes/{id}
-
-DELETE /api/notes/{id}
+| Method | Endpoint        |
+| ------ | --------------- |
+| GET    | /api/notes      |
+| GET    | /api/notes/{id} |
+| POST   | /api/notes      |
+| PUT    | /api/notes/{id} |
+| DELETE | /api/notes/{id} |
 
 ### Search
 
-GET /api/notes-search?query=keyword
+| Method | Endpoint                        |
+| ------ | ------------------------------- |
+| GET    | /api/notes-search?query=keyword |
 
-### Summary
+### AI Summary
 
-POST /api/notes/{id}/summary
+| Method | Endpoint                |
+| ------ | ----------------------- |
+| POST   | /api/notes/{id}/summary |
+
+---
 
 ## Installation
 
-### Backend
+### Backend Setup
 
 ```bash
 git clone <repository-url>
@@ -94,7 +148,15 @@ php artisan migrate
 php artisan serve
 ```
 
-### Frontend
+Backend URL:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+### Frontend Setup
 
 ```bash
 cd ai-notes-frontend
@@ -104,28 +166,95 @@ npm install
 npm run dev
 ```
 
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+---
+
 ## Swagger Documentation
 
-Generate documentation:
+Generate Documentation
 
 ```bash
 php artisan l5-swagger:generate
 ```
 
-Open:
+Open Swagger UI
 
+```text
 http://127.0.0.1:8000/api/documentation
+```
 
-## Future Improvements
+---
+
+## AI Tools Used
+
+### ChatGPT
+
+Used for:
+
+* Laravel CRUD API generation
+* React component generation
+* Swagger/OpenAPI annotations
+* API documentation
+
+### GitHub Copilot
+
+Used for:
+
+* Code completion
+* Refactoring
+* Boilerplate generation
+
+### Cursor AI
+
+Used for:
+
+* Code suggestions
+* Debugging assistance
+* Project scaffolding
+
+---
+
+## Prompts Used
+
+### Laravel
+
+* Generate Laravel CRUD APIs
+* Generate Laravel Request Validation
+* Generate Laravel Swagger Annotations
+
+### React
+
+* Generate React Notes UI
+* Generate Pagination Component
+* Generate Search Component
+
+### API Documentation
+
+* Generate OpenAPI Documentation
+* Generate Swagger Annotations
+
+---
+
+## Future Enhancements
 
 * OpenAI Embeddings
 * Semantic Search
 * Authentication
-* User Management
-* Note Categories
+* User Profiles
+* Categories & Tags
+* File Attachments
+
+---
 
 ## Author
 
 Mohan
 
-Full Stack Developer (PHP | Laravel | React)
+Full Stack Developer
+
+PHP | Laravel | React | MySQL
